@@ -18,6 +18,9 @@ help: cat
 install:
 	pip install --upgrade -e .
 
+register:
+	python setup.py register
+
 requirements:
 	pip install --upgrade -r requirements.txt
 
