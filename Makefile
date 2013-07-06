@@ -4,6 +4,7 @@ all:
 	@echo 'i:nstall'
 	@echo 'r:equirements'
 	@echo 't:est'
+	@echo 'u:pload'
 	@echo ''
 
 cat:
@@ -23,10 +24,14 @@ requirements:
 test:
 	py.test -x -s --pdb
 
+upload:
+	python setup.py sdist upload
+
 
 # Shortcuts
 
 f: freeze
 i: install
-t: test
 r: requirements
+t: test
+u: upload
