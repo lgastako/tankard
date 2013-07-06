@@ -18,7 +18,7 @@ install:
 	pip install --upgrade -e .
 
 requirements:
-	pip install -r requirements.txt
+	pip install --upgrade -r requirements.txt
 
 test:
 	py.test -x -s --pdb
