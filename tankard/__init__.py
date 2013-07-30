@@ -3,12 +3,14 @@ import re
 
 from werkzeug import cached_property
 
+from flask import get_flashed_messages
 from flask import render_template
 from flask import redirect
 from flask import request
 from flask import url_for
 from flask import jsonify
 from flask import Flask
+from flask import flash
 
 import wtforms
 
@@ -87,3 +89,15 @@ class Tankard(Flask):
 
     def back(self):
         return self.redirect(request.referrer or self.url_for("home"))
+
+    def get_flashed_messages(self, *args, **kwargs):
+        return get_flashed_messages(*args, **kwargs)
+
+    def flash(self, *args, **kwargs):
+        return flash(*args, **kwargs)
+
+    def info(self, msg):
+        return self.flash(msg, "info")
+
+    def err(self, msg):
+        return self.flash(msg, "error")
