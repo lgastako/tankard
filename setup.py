@@ -7,7 +7,7 @@ from setuptools import find_packages
 
 if __name__ == "__main__":
     setup(name="tankard",
-          version="0.0.1",
+          version="0.0.2",
           description="tankard",
           author="John Evans",
           author_email="lgastako@gmail.com",
